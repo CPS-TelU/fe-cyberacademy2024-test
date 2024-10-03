@@ -32,7 +32,7 @@ const Videoplayer: React.FC = () => {
           ref={videoRef}
           style={{ width: "100%", borderRadius: "12px" }}
         >
-          <source src="/videotronOplab.mp4" type="video/mp4" />
+          <source src="/videotron.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
