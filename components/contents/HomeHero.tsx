@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaArrowRight } from "react-icons/fa"
 import { dmSans } from '../../styles/font';
-// import Videoplay from "../ui/VideoPlayer";
+import Videoplayer from "../ui/VideoPlayer";
 
 const HomeHero = () => {
 
@@ -25,7 +25,7 @@ const HomeHero = () => {
             </Link>
 
             <div className="mt-10">
-                {/* <Videoplay /> */}
+                <Videoplayer/>
             </div>
             </div>
         </section>
