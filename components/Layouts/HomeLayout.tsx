@@ -2,6 +2,8 @@ import About from "../contents/About";
 import HomeHero from "../contents/HomeHero";
 import SectionContainer from "../utils/SectionContainer";
 import Benefit from "../contents/Benefit";
+import Knowledge from "../contents/Knowledge";
+import Requirements from "../contents/Requirements";
 
 
 const HomeLayout = () => {
@@ -11,6 +13,8 @@ const HomeLayout = () => {
                 <HomeHero />
                 <About/>
                 <Benefit/>
+                <Knowledge/>
+                <Requirements/>
             
             </SectionContainer>
         </div>

@@ -3,9 +3,9 @@ import Image from 'next/image'
 const About = () => {
 
     return (
-        <section className="py-20">
+        <section className="p-12">
             <div>
-                <h1 className="text-5xl font-bold items-center text-center">
+                <h1 className="text-6xl font-bold items-center text-center">
                     What is <span className="gradient-text">Cyber Academy</span> ?
                 </h1>
                 </div>
@@ -16,7 +16,7 @@ const About = () => {
                         alt="Cyber Academy Castle"
                         width={1000} 
                         height={1000} 
-                        className="w-[700px] h-[500px]"
+                        className="w-[700px] h-[600px]"
                     />
                     </div>
                 <div className="md:w-1/2 p-8 px-12">
