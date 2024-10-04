@@ -19,13 +19,13 @@ const Requirements = () => {
                 <div className="border-b border-gray-300">
                     <button
                         type="button"
-                        className={`flex justify-between items-center w-full py-4 font-medium text-left ${
+                        className={`flex justify-between items-center w-full py-4 font-medium text-left text-xl ${
                             isOpen1 ? 'text-red-600' : 'text-gray-900'
                         }`}
                         onClick={() => setIsOpen1(!isOpen1)}
                     >
                         <span>CV ATS</span>
-                        <span className={`${isOpen1 ? 'text-red-600' : 'text-gray-900'}`}>
+                        <span className={`${isOpen1 ? 'text-[#BA2025]' : 'text-gray-900'}`}>
                             {isOpen1 ? '−' : '+'}
                         </span>
                     </button>
@@ -45,12 +45,12 @@ const Requirements = () => {
                     <button
                         type="button"
                         className={`flex justify-between items-center w-full py-4 text-xl font-medium text-left ${
-                            isOpen2 ? 'text-red-600' : 'text-gray-900'
+                            isOpen2 ? 'text-[#BA2025] ' : 'text-gray-900'
                         }`}
                         onClick={() => setIsOpen2(!isOpen2)}
                     >
                         <span>Full Body Photo</span>
-                        <span className={`${isOpen2 ? 'text-red-600' : 'text-gray-900'}`}>
+                        <span className={`${isOpen2 ? 'text-[#BA2025]' : 'text-gray-900'}`}>
                             {isOpen2 ? '−' : '+'}
                         </span>
                     </button>
@@ -69,7 +69,7 @@ const Requirements = () => {
                 <div className="border-b border-gray-300">
                     <button
                         type="button"
-                        className={`flex justify-between items-center w-full py-4 font-medium text-left ${
+                        className={`flex justify-between items-center w-full py-4 font-medium text-left text-xl ${
                             isOpen3 ? 'text-red-600' : 'text-gray-900'
                         }`}
                         onClick={() => setIsOpen3(!isOpen3)}
@@ -94,7 +94,7 @@ const Requirements = () => {
                 <div className="border-b border-gray-300">
                     <button
                         type="button"
-                        className={`flex justify-between items-center w-full py-4 font-medium text-left ${
+                        className={`flex justify-between items-center w-full py-4 font-medium text-left text-xl ${
                             isOpen4 ? 'text-red-600' : 'text-gray-900'
                         }`}
                         onClick={() => setIsOpen4(!isOpen4)}

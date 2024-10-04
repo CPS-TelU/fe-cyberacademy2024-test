@@ -3,7 +3,7 @@ import React from 'react';
 
 const knowledgeItems = [
     { image: './castle.png', title: 'Basic Linux' },
-    { image: 'path/to/web-dev-icon.png', title: 'Website Development' },
+    { image: './', title: 'Website Development' },
     { image: 'path/to/iot-icon.png', title: 'Internet of Things' },
     { image: 'path/to/iot-icon.png', title: 'Internet of Things' },
     { image: 'path/to/ml-icon.png', title: 'Machine Learning' },

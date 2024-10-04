@@ -130,7 +130,7 @@ const Header = () => {
                 </div>
               )}
             </div>
-          </div>
+          </div> 
         </div>
         <div className="ml-auto flex space-x-8 items-center">
           <Link

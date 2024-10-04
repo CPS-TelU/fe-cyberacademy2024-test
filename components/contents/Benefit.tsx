@@ -6,7 +6,7 @@ const Benefit = () => {
         <section>
             <div>
                 <h1 className="text-6xl font-bold items-center text-center">
-                    What's the Benefit you say?</h1>
+                    What's the<span className="gradient-text"> Benefit</span> you say?</h1>
             </div>
         </section>
 

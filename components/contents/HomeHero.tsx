@@ -15,7 +15,7 @@ const HomeHero = () => {
                 <h1 className="text-5xl font-bold">
                     WELCOME TO <span className="gradient-text">CYBER ACADEMY</span>
                 </h1>
-                <p className="mt-8 text-lg font-medium">
+                <p className="mt-8 text-lg font-bold">
                     BRACE YOURSELF FOR A WHOLE NEW ADVENTURE
                 </p>
                 <Link 
