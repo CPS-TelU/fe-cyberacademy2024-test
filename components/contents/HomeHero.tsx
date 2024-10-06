@@ -7,15 +7,15 @@ import Videoplayer from "../ui/VideoPlayer";
 const HomeHero = () => {
 
     return (
-        <section className={`flex justify-center font-bold h-screen py-20 ${dmSans.className}`} >
-            <div className="text-center">
-                <h1 className="text-6xl font-extrabold mb-4">
+        <section className={`flex justify-center font-bold min-h-screen py-20 ${dmSans.className}`} >
+            <div className="text-center items-center">
+                <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-extrabold mb-4">
                     HELLO <span className="gradient-text">CYTIZEN</span> !!
                 </h1>
-                <h1 className="text-5xl font-bold">
+                <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-extrabold mb-4 mx-auto w-[390px] sm:w-[600px] md:w-[800px] lg:w-[800px] xl:w-[900px] 2xl:w-[1000px]">
                     WELCOME TO <span className="gradient-text">CYBER ACADEMY</span>
                 </h1>
-                <p className="mt-8 text-lg font-bold">
+                <p className="mt-4 text-lg sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl 2xl:text-3xl font-bold ">
                     BRACE YOURSELF FOR A WHOLE NEW ADVENTURE
                 </p>
                 <Link 
