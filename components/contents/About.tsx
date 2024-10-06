@@ -3,7 +3,7 @@ import Image from 'next/image'
 const About = () => {
 
     return (
-        <section className="p-12 mt-12">
+        <section className="p-12">
             <div>
                 <h1 className="text-6xl font-bold items-center text-center">
                     What is <span className="gradient-text">Cyber Academy</span> ?

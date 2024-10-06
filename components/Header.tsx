@@ -1,15 +1,16 @@
-"use client"; // Pastikan ini ada di bagian atas file
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation"; // Import usePathname
+import { usePathname } from "next/navigation";
 import { dmSans } from "../styles/font";
-// import Navbar from "./MobileNav";
 
 const Header = () => {
-  const pathname = usePathname(); // Gunakan usePathname untuk mendapatkan path saat ini
-  const [isActivityOpen, setIsActivityOpen] = useState(false); // State to manage dropdown visibility
-  const dropdownRef = useRef<HTMLDivElement>(null); // Ref to detect clicks outside
+  const pathname = usePathname();
+  const [isActivityOpen, setIsActivityOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isScrollingUp, setIsScrollingUp] = useState(true); // New state for tracking scroll direction
+  const lastScrollY = useRef(0); // Reference to store last scroll position
 
   const handleNavigationClick = (
     href: string,
@@ -38,112 +39,77 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrollingUp(currentScrollY < lastScrollY.current || currentScrollY < 10); // Adjust visibility
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className={`${dmSans.className} z-[99999] fixed top-0 w-full`}>
+    <header
+      className={`${dmSans.className} fixed top-0 w-full transition-transform duration-300 z-[9999] ${
+        isScrollingUp ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <nav
         className="mx-auto hidden lg:flex max-w-[1200px] items-center justify-between p-4 rounded-full bg-white shadow-lg"
         style={{ transform: "translateY(40%)" }}
       >
         <div className="flex items-center gap-8">
-          {/* Logo and left navigation */}
-          <div className="flex items-center gap-2">
-            <Link
-              href="/"
-              className="flex items-center gap-2"
-              onClick={(e) => handleNavigationClick("/", e)}
-            >
-              <Image src="/logocps.png" alt="logo" width={130} height={50} />
-            </Link>
-          </div>
-          <div className="bg-gray-200 h-10 w-[0.125rem] rounded-full hidden sm:block" />
-          <div className="hidden md:flex space-x-8 items-center">
-            <Link
-              href="/"
-              onClick={(e) => handleNavigationClick("/", e)}
-              className={`font-medium ${
-                pathname === "/"
-                  ? "text-red-600"
-                  : "text-gray-700 hover:text-red-600"
-              }`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              onClick={(e) => handleNavigationClick("/about", e)}
-              className={`font-medium ${
-                pathname === "/about"
-                  ? "text-red-600"
-                  : "text-gray-700 hover:text-red-600"
-              }`}
-            >
-              About Us
-            </Link>
-            <Link
-              href="/blog"
-              onClick={(e) => handleNavigationClick("/blog", e)}
-              className={`font-medium ${
-                pathname === "/blog"
-                  ? "text-red-600"
-                  : "text-gray-700 hover:text-red-600"
-              }`}
-            >
-              Blog
-            </Link>
-            <div className="relative" ref={dropdownRef}>
-              <span
-                className={`font-medium cursor-pointer ${
-                  pathname.startsWith("/activity")
-                    ? "text-red-600"
-                    : "text-gray-700 hover:text-red-600"
-                }`}
-                onClick={toggleActivityDropdown} // Toggle dropdown on click
-              >
-                Activity
-              </span>
-              {isActivityOpen && ( // Conditionally render dropdown
-                <div className="absolute left-0 mt-6 w-40 bg-white shadow-lg rounded-md">
-                  <Link
-                    href="https://cyberrecruitment.cpsrg.org/"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Open Laboratory
-                  </Link>
-                  <Link
-                    href="https://cyberrecruitment.cpsrg.org/"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    CyberAcademy
-                  </Link>
-                  <Link
-                    href="https://cyberrecruitment.cpsrg.org/"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    CyberRecruitment
-                  </Link>
-                </div>
-              )}
-            </div>
-          </div> 
+          <Link
+            href="/"
+            className="flex items-center gap-2"
+            onClick={(e) => handleNavigationClick("/", e)}
+          >
+            <Image src="/logocps.png" alt="logo" width={130} height={50} />
+          </Link>
         </div>
-        <div className="ml-auto flex space-x-8 items-center">
+
+        <div className="flex-1 flex items-center justify-center gap-8">
+          <Link
+            href="/"
+            onClick={(e) => handleNavigationClick("/", e)}
+            className={`font-medium ${
+              pathname === "/" ? "text-red-600" : "text-gray-700 hover:text-red-600"
+            }`}
+          >
+            Home
+          </Link>
+          <Link
+            href="/about"
+            onClick={(e) => handleNavigationClick("/about", e)}
+            className={`font-medium ${
+              pathname === "/about" ? "text-red-600" : "text-gray-700 hover:text-red-600"
+            }`}
+          >
+            About Us
+          </Link>
+          <Link
+            href="/blog"
+            onClick={(e) => handleNavigationClick("/blog", e)}
+            className={`font-medium ${
+              pathname === "/blog" ? "text-red-600" : "text-gray-700 hover:text-red-600"
+            }`}
+          >
+            Blog
+          </Link>
           <Link
             href="/contact"
             onClick={(e) => handleNavigationClick("/contact", e)}
             className={`font-medium ${
-              pathname === "/contact"
-                ? "text-red-600"
-                : "text-gray-700 hover:text-red-600"
+              pathname === "/contact" ? "text-red-600" : "text-gray-700 hover:text-red-600"
             }`}
           >
             Contact
           </Link>
+        </div>
+
+        <div className="flex items-center">
           <a
             href="https://lms.cpslaboratory.com"
             target="_blank"
@@ -154,7 +120,6 @@ const Header = () => {
           </a>
         </div>
       </nav>
-      {/* <Navbar /> */}
     </header>
   );
 };

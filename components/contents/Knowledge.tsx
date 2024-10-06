@@ -2,11 +2,11 @@ import React from 'react';
 
 
 const knowledgeItems = [
-    { image: './castle.png', title: 'Basic Linux' },
-    { image: './', title: 'Website Development' },
-    { image: 'path/to/iot-icon.png', title: 'Internet of Things' },
-    { image: 'path/to/iot-icon.png', title: 'Internet of Things' },
-    { image: 'path/to/ml-icon.png', title: 'Machine Learning' },
+    { image: './linux.svg', title: 'Basic Linux' },
+    { image: './backend.svg', title: 'Website Development' },
+    { image: './internet-of-things.svg', title: 'Internet of Things' },
+    { image: './app-development.svg', title: 'App Development' },
+    { image: '/machine-learning.svg', title: 'Machine Learning' },
 ];
 
 
