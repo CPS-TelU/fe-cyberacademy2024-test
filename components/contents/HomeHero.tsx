@@ -3,6 +3,7 @@ import React from 'react';
 import { FaArrowRight } from "react-icons/fa"
 import { dmSans } from '../../styles/font';
 import Videoplayer from "../ui/VideoPlayer";
+import  ArrowButton   from '../ui/AniButton';
 
 const HomeHero = () => {
 
@@ -18,11 +19,12 @@ const HomeHero = () => {
                 <p className="mt-4 text-lg sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl 2xl:text-3xl font-bold ">
                     BRACE YOURSELF FOR A WHOLE NEW ADVENTURE
                 </p>
-                <Link 
+                {/* <Link 
                 href="/"
                 className="inline-flex items-center justify-center text-[4vw] sm:text-[4vw] md:text-[3vw] lg:text-[1.3vw] xl:text-[1vw]  bg-[#BA2025] text-white py-2 px-6 rounded-2xl mt-8 inline-block hover:bg-red-800 transition-colors duration-300"
             >Let's Get Started <FaArrowRight className="ml-2"/>
-            </Link>
+            </Link> */}
+            <ArrowButton text="Lets Get Started" href="/" className='mt-8'/> 
 
             <div className="mt-10">
                 <Videoplayer/>
