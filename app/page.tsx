@@ -2,7 +2,7 @@ import HomeLayout from "../components/Layouts/HomeLayout";
 
 export default function Home() {
   return (
-    <main className="pt-4">
+    <main className="py-4">
       <HomeLayout />
     </main>
   );
