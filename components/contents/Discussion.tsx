@@ -83,7 +83,7 @@ const Discussion = () => {
       <h1 className="text-red-600 text-5xl font-bold mt-10">Forum Discussion</h1>
       <div className="mt-10">
         <button className="bg-red-600 text-white font-bold py-2 px-4 rounded-3xl">
-          Create New Discussion
+          Create New Discussion with us
         </button>
       </div>
       <div className="flex mt-10">
