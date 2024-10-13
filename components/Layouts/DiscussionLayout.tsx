@@ -1,9 +1,10 @@
 import Discussion from "../contents/Discussion"
+import ModulDiscussion from "../contents/ModulDiscussion"
 
 const DiscussionLayout = () => {
     return (
         <div>
-            <Discussion />
+            <ModulDiscussion/>
         </div>
     )
 }
