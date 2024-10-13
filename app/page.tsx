@@ -3,9 +3,10 @@ import MyCourse from "../components/Layouts/MyCourse";
 import DashboardLayout from "../components/Layouts/DashboardLayout";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { poppins } from "@/styles/font";
 export default function Home() {
   return (
-    <main className="py-4">
+    <main className={`${poppins.className} py-4`}>
       <Header />
       <HomeLayout />
       <Footer />
