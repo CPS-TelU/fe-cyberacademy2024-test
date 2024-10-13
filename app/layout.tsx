@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import { poppins } from "@/styles/font";
 import { METADATA } from "@/lib/metadata";
 
@@ -19,7 +17,7 @@ export const metadata: Metadata = {
       url: METADATA.authors.url,
     },
   ],
-}
+};
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,11 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className}`}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <body className={`${poppins.className}`}>{children}</body>
     </html>
   );
 }

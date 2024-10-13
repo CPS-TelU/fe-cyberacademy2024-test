@@ -1,6 +1,6 @@
 
 export const METADATA = {
-    title: "Cyber Academy | Study Group of Cyber Physical System Laboratory",
+    title: "Cyber Academy",
     description:
       "Cyber Academy adalah study group dari Cyber Physical System Laboratory yang mengajarkan dasar-dasar Linux, pengembangan web, IoT, machine learning, dan pitching idea.",
     keyword:
