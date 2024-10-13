@@ -13,8 +13,11 @@ export default async function DashboardLayout({
 }>) {
   return (
     <html lang="en">
+      
+      <body className={`${poppins.className} py-8`}>
       <Header />
-      <body className={`${poppins.className} py-8`}>{children}</body>
+        {children}
+        </body>
     </html>
   );
 }

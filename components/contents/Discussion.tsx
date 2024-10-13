@@ -79,15 +79,15 @@ const Discussion = () => {
   }, []);
 
   return (
-    <section className={`p-20 ml-10 ${dmSans.className}`}>
-      <h1 className="text-red-600 text-5xl font-bold mt-10">Forum Discussion</h1>
-      <div className="mt-10">
-        <button className="bg-red-600 text-white font-bold py-2 px-4 rounded-3xl">
-          Create New Discussion with us
+    <section className={`p-4 md:p-10 lg:p-20 ml-0 md:ml-10 ${dmSans.className}`}>
+      <h1 className="text-red-600 text-2xl md:text-4xl lg:text-5xl font-bold mt-10">Forum Discussion</h1>
+      <div className="mt-6 md:mt-10">
+        <button className="bg-red-600 text-white font-bold py-2 px-4 rounded-3xl w-full md:w-1/2 lg:w-1/4">
+          Create New Discussion
         </button>
       </div>
-      <div className="flex mt-10">
-        <div className="w-1/4 bg-white border border-gray-100 p-6 shadow-lg rounded-2xl h-[240px]">
+      <div className="flex flex-col md:flex-row mt-6 md:mt-10">
+        <div className="w-full md:w-1/3 lg:w-1/4 bg-white border border-gray-100 p-4 md:p-6 shadow-lg rounded-2xl h-auto md:h-[240px]">
           <h2 className="font-bold mb-4">Filter Discussion</h2>
           <div className="border-b border-gray-300 mb-4">
             <label className="block mb-2">
@@ -120,7 +120,7 @@ const Discussion = () => {
             className="border border-gray-100 p-2 rounded w-full rounded-3xl mb-6 shadow-lg"
           />
         </div>
-        <div className="w-3/4 ml-10">
+        <div className="w-full md:w-2/3 lg:w-3/4 mt-6 md:mt-0 md:ml-6 lg:ml-10">
           {/* Custom Select Dropdown */}
           <div className="relative w-full mb-6" ref={selectRef}>
             <button
@@ -146,7 +146,11 @@ const Discussion = () => {
           </div>
 
           {discussions.map((discussion) => (
-            <div key={discussion.id} className="border border-gray-100 p-4 rounded mb-4 bg-white shadow-lg rounded-3xl">
+            <div
+              key={discussion.id}
+              className="border border-gray-100 p-4 rounded mb-4 bg-white shadow-lg rounded-3xl"
+              style={{ maxHeight: '200px', overflowY: 'auto' }} // Setting a fixed height with scrollable content
+            >
               <div className="flex items-center mb-2">
                 <div className="w-10 h-10 bg-red-600 rounded-full flex justify-center items-center text-white font-bold mr-3">
                   {discussion.user.charAt(0).toUpperCase()}

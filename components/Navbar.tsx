@@ -57,7 +57,7 @@ const Header = () => {
         isScrollingUp ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-     <nav
+      <nav
         className="mx-auto hidden lg:flex max-w-[1200px] items-center justify-between p-4 rounded-full bg-white shadow-lg"
         style={{ transform: "translateY(40%)" }}
       >
@@ -81,9 +81,9 @@ const Header = () => {
           </Link>
           <Link
             href="/dashboard/mycourses"
-            onClick={(e) => handleNavigationClick("/my-courses", e)}
+            onClick={(e) => handleNavigationClick("/dashboard/mycourses", e)}
             className={`font-medium ${
-              pathname === "/my-courses"
+              pathname === "/dashboard/mycourses"
                 ? "text-red-600"
                 : "text-gray-700 hover:text-red-600"
             }`}
@@ -91,10 +91,10 @@ const Header = () => {
             My Courses
           </Link>
           <Link
-            href="/discussion"
-            onClick={(e) => handleNavigationClick("/discussion", e)}
+            href="/dashboard/discussion"
+            onClick={(e) => handleNavigationClick("/dashboard/discussion", e)}
             className={`font-medium ${
-              pathname === "/discussion"
+              pathname === "/dashboard/discussion"
                 ? "text-red-600"
                 : "text-gray-700 hover:text-red-600"
             }`}
@@ -115,16 +115,16 @@ const Header = () => {
             />
           </div>
           {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-lg z-10">
+            <div className="absolute right-0 mt-40 w-48 bg-white border border-gray-200 shadow-lg rounded-2xl z-10">
               <Link
                 href="/profile"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-gray-700 hover:text-white hover:bg-red-500"
               >
                 Profile
               </Link>
               <Link
                 href="/logout"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-gray-700 hover:text-white hover:bg-red-500"
               >
                 Logout
               </Link>
