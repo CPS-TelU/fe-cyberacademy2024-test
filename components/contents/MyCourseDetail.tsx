@@ -20,7 +20,7 @@ const MyCourseDetail = () => {
             title: "Forum Discussion", 
             description: "Basic Linux & GitHub", 
             icon: FaComments, 
-            url: "/dashboard/mycourses/coursedetail/moduldiscussion"  
+            url: "/lms/mycourses/coursedetail/moduldiscussion"  
         },
     ];
 
