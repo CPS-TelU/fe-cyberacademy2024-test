@@ -35,7 +35,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
           <p className="text-[#454545] text-xs sm:text-xs md:text-xs lg:text-sm xl:text-md 2xl:text-lg">
             {status}
           </p>
-          <button className="px-3 py-1 bg-[#BA2025] text-[#FFFFFF] rounded-lg text-xs sm:text-sm md:text-base">
+          <button className="px-3 py-1 bg-[#BA2025] text-[#FFFFFF] rounded-lg text-xs sm:text-sm md:text-base hover:bg-[#9D1F24] ">
             View Course
           </button>
         </div>
