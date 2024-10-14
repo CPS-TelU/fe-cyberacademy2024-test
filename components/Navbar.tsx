@@ -69,10 +69,10 @@ const Header = () => {
 
         <div className="flex-1 flex justify-center gap-10">
           <Link
-            href="/dashboard"
-            onClick={(e) => handleNavigationClick("/dashboard", e)}
+            href="/lms/dashboard"
+            onClick={(e) => handleNavigationClick("/lms/dashboard", e)}
             className={`font-medium ${
-              pathname === "/dashboard"
+              pathname === "/lms/dashboard"
                 ? "text-red-600"
                 : "text-gray-700 hover:text-red-600"
             }`}
@@ -80,10 +80,10 @@ const Header = () => {
             Dashboard
           </Link>
           <Link
-            href="/dashboard/mycourses"
-            onClick={(e) => handleNavigationClick("/dashboard/mycourses", e)}
+            href="/lms/mycourses"
+            onClick={(e) => handleNavigationClick("/lms/mycourses", e)}
             className={`font-medium ${
-              pathname === "/dashboard/mycourses"
+              pathname === "/lms/mycourses"
                 ? "text-red-600"
                 : "text-gray-700 hover:text-red-600"
             }`}
@@ -91,10 +91,10 @@ const Header = () => {
             My Courses
           </Link>
           <Link
-            href="/dashboard/discussion"
-            onClick={(e) => handleNavigationClick("/dashboard/discussion", e)}
+            href="/lms/discussion"
+            onClick={(e) => handleNavigationClick("/lms/discussion", e)}
             className={`font-medium ${
-              pathname === "/dashboard/discussion"
+              pathname === "/lms/discussion"
                 ? "text-red-600"
                 : "text-gray-700 hover:text-red-600"
             }`}

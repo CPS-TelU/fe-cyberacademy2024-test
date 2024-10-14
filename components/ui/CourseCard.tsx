@@ -38,7 +38,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
             {status}
           </p>
           <Button className="px-3 py-1 bg-[#BA2025] text-[#FFFFFF] rounded-lg text-xs sm:text-sm md:text-base">
-            <Link href={"/dashboard/mycourses/coursedetail"}>View Course</Link>
+            <Link href={"/lms/mycourses/coursedetail"}>View Course</Link>
           </Button>
         </div>
       </div>
