@@ -20,8 +20,8 @@ const ModulDiscussion = () => {
     ];
 
     return (
-        <section className={`p-20 ${dmSans.className}`}>
-            <div className="m-12">
+        <section className={`p-12 ${dmSans.className}`}>
+            <div className="m-6">
                 <h2 className="text-red-600 text-5xl font-bold">Basic Linux</h2>
             </div>
             <div className="border border-gray-100 p-6 rounded-2xl bg-white shadow-lg">

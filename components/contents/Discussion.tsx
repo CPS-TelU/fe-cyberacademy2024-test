@@ -33,7 +33,7 @@ const Discussion = () => {
     'IoT': [
       {
         id: 3,
-        user: 'Jajang miharja',
+        user: 'Jajang Miharja',
         time: '3 days ago',
         content:
           "IoT Iot apa yang Iot?",
@@ -42,7 +42,7 @@ const Discussion = () => {
     'Machine Learning': [
       {
         id: 4,
-        user: 'Niki Zefanya',
+        user: 'Niki Manurung',
         time: '5 days ago',
         content:
           "Machine learning apaan?",
@@ -121,7 +121,7 @@ const Discussion = () => {
           />
         </div>
         <div className="w-full md:w-2/3 lg:w-3/4 mt-6 md:mt-0 md:ml-6 lg:ml-10">
-          {/* Custom Select Dropdown */}
+       
           <div className="relative w-full mb-6" ref={selectRef}>
             <button
               onClick={handleDropdown}
@@ -148,10 +148,10 @@ const Discussion = () => {
           {discussions.map((discussion) => (
             <div
               key={discussion.id}
-              className="border border-gray-100 p-4 rounded mb-4 bg-white shadow-lg rounded-3xl"
-              style={{ maxHeight: '200px', overflowY: 'auto' }} // Setting a fixed height with scrollable content
+              className="border border-gray-100 p-4 rounded mb-4 bg-white shadow-lg rounded-3xl "
+              style={{ height: '200px', overflowY: 'auto' }} // Fixed height with scrollable content
             >
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 ">
                 <div className="w-10 h-10 bg-red-600 rounded-full flex justify-center items-center text-white font-bold mr-3">
                   {discussion.user.charAt(0).toUpperCase()}
                 </div>
