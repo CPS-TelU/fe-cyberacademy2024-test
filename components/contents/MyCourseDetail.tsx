@@ -14,7 +14,7 @@ const MyCourseDetail = () => {
             title: "Assignment 1", 
             description: "Basic Linux & GitHub", 
             icon: FaClipboardList, 
-            url: "/assignment-1"  
+            url: "/lms/mycourses/coursedetail/assignment"  
         },
         { 
             title: "Forum Discussion", 

@@ -10,9 +10,7 @@ export default function Home() {
   return (
     <main className={`${poppins.className} py-4`}>
       <Header />
-      {/* <HomeLayout /> */}
-      {/* <AssignmentPageLayout /> */}
-      <AddAssignmentPage />
+      <HomeLayout />
       <Footer />
     </main>
   );
