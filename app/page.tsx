@@ -8,7 +8,7 @@ import { poppins } from "@/styles/font";
 import AddAssignmentPage from "@/components/Layouts/AddAssignmentPage";
 export default function Home() {
   return (
-    <main className={`${poppins.className} py-4`}>
+    <main className= "py-4">
       <Header />
       <HomeLayout />
       <Footer />

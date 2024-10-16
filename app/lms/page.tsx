@@ -5,10 +5,7 @@ import Link from "next/link";
 
 export default function Dashboard() {
   return (
-    <main className="relative flex flex-col items-center justify-center px-4 pt-20 z-[999]">
-      {/* <Button variant={"ghost"} asChild className="w-full justify-start">
-        <Link href={"/"}>Dashboard</Link>
-      </Button> */}
+    <main className="relative flex flex-col items-center justify-center px-4 pt-16 z-[999]">
       <DashboardLayout />
     </main>
   );
