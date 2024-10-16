@@ -4,9 +4,9 @@ import "../globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Dashboard",
+  title: "Login",
 };
-export default async function DashboardLayout({
+export default async function LoginLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
