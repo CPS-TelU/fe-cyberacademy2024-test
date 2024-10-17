@@ -1,12 +1,13 @@
 import React from 'react';
 import AssignmentCard from '../ui/AssignmentCard2';
 import Image from 'next/image';
+import { poppins } from '@/styles/font';
 
 const AssignmentSection: React.FC = () => {
     return (
-        <div>
+        <div className={` ${poppins.className}`}>
             {/* Red Title with PNG Icon outside of AssignmentCard */}
-            <h1 className="text-3xl font-semibold text-red-600 flex items-center justify-start mb-4 mt-28">
+            <h1 className="text-3xl font-semibold text-red-600 flex items-center justify-start mb-4 mt-28 font-bold">
                 <span className="mr-4 sm:mr-0 ml-4 sm:ml-0"> {/* Geser icon ke kanan pada mobile */}
                     {/* PNG Icon for Assignment */}
                     <Image 
@@ -23,7 +24,7 @@ const AssignmentSection: React.FC = () => {
             {/* Assignment Card for the details */}
             <AssignmentCard 
                 title="" // You don't need to pass the title here anymore
-                details={
+                details={(
                     <div>
                         <div className="flex items-center mb-1"> {/* Margin bottom for spacing */}
                             <Image 
@@ -38,7 +39,7 @@ const AssignmentSection: React.FC = () => {
                         {/* Add a border line below the text */}
                         <div className="border-b mt-4 border-black w-full" /> {/* Adjust width as needed */}
                     </div>
-                }
+                )}
                 openDate="Thursday, 31 October 2024, 6:00 PM" 
                 closeDate="Monday, 4 November 2024, 5:00 PM" 
             />

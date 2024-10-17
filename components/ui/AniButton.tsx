@@ -63,32 +63,23 @@ export function CustomButton({
   text = "Open",
   href,
   textColor = "white",
-  buttonOverlayColor = "#BA2025",
-  borderColor = "#BA2025",
+  borderColor = "#BA2025", // purple border color
   className,
   ...props
 }: ArrowButtonProps) {
   return (
     <Link href={href} passHref>
       <button
-        style={{ borderColor: borderColor }}
         className={cn(
-          "relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group",
+          "rounded-xl relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4 border-l-2 active:border-[#BA2025] active:shadow-none shadow-lg bg-gradient-to-tr from-[#BA2025] to-red-500 border-[#BA2025] text-white",
           className
         )}
         {...props}
       >
-        <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-00 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
-          <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-        </span>
         <span
-          style={{ background: buttonOverlayColor }}
-          className="absolute bottom-0 left-0 w-full h-full transition-all duration-300 ease-in-out delay-200 -translate-x-full translate-y-full bg-red-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"
+          className="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-32 group-hover:h-32 opacity-10"
         ></span>
-        <span
-          style={{ color: textColor }}
-          className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white"
-        >
+        <span style={{ color: textColor }} className="relative">
           {text}
         </span>
       </button>

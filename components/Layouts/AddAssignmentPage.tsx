@@ -6,7 +6,7 @@ import SubmissionCard from "../ui/AddSubmissionCard";
 
 const AssignmentPageLayout = () => {
     return (
-        <div className="w-full">
+        <div className="w-full ">
             <SectionContainer fullWidth>
                 <AssignmentSection />
                 <SubmissionCard>
