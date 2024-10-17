@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { dmSans } from "@/styles/font";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperclip, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { useState, useEffect, useRef } from 'react';
+import { dmSans, poppins } from '@/styles/font';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPaperclip, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 // Define the possible module options as a union of string literals
 type ModuleOption = "Basic Linux" | "Web Development" | "IoT" | "Machine Learning";
@@ -95,7 +95,7 @@ const Discussion = () => {
   }, []);
 
   return (
-    <section className={`p-4 md:p-10 lg:p-12 ml-0 md:ml-10 ${dmSans.className}`}>
+    <section className={`p-4 md:p-10 lg:p-12 ml-0 md:ml-10 ${poppins.className}`}>
       <h1 className="text-red-600 text-2xl md:text-4xl lg:text-5xl font-bold mt-10">Forum Discussion</h1>
       
       <div className="flex items-center border border-gray-100 p-4 rounded-2xl bg-white shadow-lg mt-6">
