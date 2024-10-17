@@ -4,8 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { dmSans } from "../styles/font";
+import MobileNavDash from "./MobileNavDash";
 
-const Header = () => {
+const NavbarLms = () => {
   const pathname = usePathname();
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -69,10 +70,10 @@ const Header = () => {
 
         <div className="flex-1 flex justify-center gap-10">
           <Link
-            href="/lms/dashboard"
-            onClick={(e) => handleNavigationClick("/lms/dashboard", e)}
+            href="/lms"
+            onClick={(e) => handleNavigationClick("/lms", e)}
             className={`font-medium ${
-              pathname === "/lms/dashboard"
+              pathname === "/lms"
                 ? "text-red-600"
                 : "text-gray-700 hover:text-red-600"
             }`}
@@ -132,8 +133,9 @@ const Header = () => {
           )}
         </div>
       </nav>
+      <MobileNavDash/>
     </header>
   );
 };
 
-export default Header;
+export default NavbarLms;
