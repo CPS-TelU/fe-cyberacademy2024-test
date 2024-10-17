@@ -119,12 +119,12 @@ const NavbarLms = () => {
             <div className="absolute right-0 mt-40 w-48 bg-white border border-gray-200 shadow-lg rounded-2xl z-10">
               <Link
                 href="/lms/profile"
-                className="block px-4 py-2 text-gray-700 hover:text-white hover:bg-red-600 hover:rounded-t-2xl"
+                className="block px-4 py-2 text-gray-700 hover:text-white hover:bg-red-600 hover:rounded-t-2xl "
               >
                 Profile
               </Link>
               <Link
-                href="/logout"
+                href="/"
                 className="block px-4 py-2 text-gray-700 hover:text-white hover:bg-red-600 hover:rounded-b-2xl"
               >
                 Logout
