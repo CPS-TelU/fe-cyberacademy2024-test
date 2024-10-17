@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { poppins } from "@/styles/font";
 import "../globals.css";
 
 
@@ -13,7 +12,7 @@ export default async function RegisterationLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} py-8`}>
+      <body>
         {children}
         </body>
     </html>
