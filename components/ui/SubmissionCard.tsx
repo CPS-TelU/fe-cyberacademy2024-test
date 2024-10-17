@@ -9,8 +9,8 @@ interface SubmissionCardProps {
 
 const SubmissionCard: React.FC<SubmissionCardProps> = ({ status, timeRemaining }) => {
     return (
-        <div className="bg-white shadow-md rounded-lg p-6 mx-auto w-11/12 sm:w-3/4 md:w-2/3 lg:w-full lg:mr-[36rem]">
-
+        <div className="flex items-center justify-center ">
+        <div className="bg-white shadow-md rounded-lg p-6 w-11/12 sm:w-[500px] md:w-[700px] lg:w-[1000px] xl:w-[1155px] ">
             <div className="mb-4"> {/* Margin below the button to separate from the header */}
                 <Link href="/lms/mycourses/coursedetail/assignment/addassignment">
                 <button className="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition duration-300">
@@ -31,6 +31,7 @@ const SubmissionCard: React.FC<SubmissionCardProps> = ({ status, timeRemaining }
                     </tr>
                 </tbody>
             </table>
+        </div>
         </div>
     );
 };

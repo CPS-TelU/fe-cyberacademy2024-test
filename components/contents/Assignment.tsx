@@ -12,7 +12,7 @@ export default function AssignmentContent() {
 
   return (
     <div className="space-y-4 mb-32">
-      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#BA2025] mb-4">
+      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-bold text-[#BA2025] mb-4">
         Assignment
       </h2>
       <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-black mb-3">

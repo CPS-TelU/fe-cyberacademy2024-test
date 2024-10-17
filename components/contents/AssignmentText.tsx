@@ -7,8 +7,7 @@ const AssignmentText: React.FC = () => {
     <div>
         {/* Red Title with PNG Icon outside of AssignmentCard */}
         <h1 className="text-3xl font-semibold text-red-600 flex items-center justify-start mb-4 mt-28">
-            <span className="mr-4 sm:mr-0 ml-4 sm:ml-0"> {/* Geser icon ke kanan pada mobile */}
-                {/* PNG Icon for Assignment */}
+            <span className="mr-4 sm:mr-0 ml-4 sm:ml-0"> 
                 <Image 
                     src="/Assignment1.png" // Update this path to your PNG file
                     alt="Assignment Icon" 
