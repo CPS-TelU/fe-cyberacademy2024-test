@@ -1,6 +1,27 @@
+"use client";
+
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { poppins } from "@/styles/font";
+import { SkeletonAbout }  from "../ui/SkeletonCard";
 
 const About = () => {
+  const [isLoading, setIsLoading] = useState(true);
+ 
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 700); // Simulate loading delay
+
+    return () => clearTimeout(timer); // Cleanup timer on component unmount
+  }, []);
+
+  if (isLoading) {
+    return (
+        <SkeletonAbout /> 
+    );
+  }
   return (
     <section className="px-6 md:py-12 md:px-12 xl:px-28  ">
       <div>
