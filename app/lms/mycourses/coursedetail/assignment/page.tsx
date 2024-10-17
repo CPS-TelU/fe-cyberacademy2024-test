@@ -6,4 +6,4 @@ export default function AssignmentPage() {
         <AssignmentPageLayout/>
       </main>
     );
-  }
+  } 

@@ -9,10 +9,7 @@ const AssignmentPageLayout = () => {
         <div className="w-full">
             <SectionContainer fullWidth>
                 <AssignmentSection />
-                
-                {/* SubmissionCard dengan konten (children) */}
                 <SubmissionCard>
-                   
                 <SubmissionText />
                 </SubmissionCard>
             </SectionContainer>
