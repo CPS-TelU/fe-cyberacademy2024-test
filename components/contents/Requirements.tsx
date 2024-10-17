@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { SkeletonRequirement } from '../ui/SkeletonCard';
 
 const Requirements = () => {
     const [isOpen1, setIsOpen1] = useState(false);
@@ -9,7 +10,25 @@ const Requirements = () => {
     const [isOpen4, setIsOpen4] = useState(false);
     const [isOpen5, setIsOpen5] = useState(false);
 
+const [isLoading, setIsLoading] = useState(true);
+ 
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 700); // Simulate loading delay
+
+    return () => clearTimeout(timer); // Cleanup timer on component unmount
+  }, []);
+
+  if (isLoading) {
     return (
+        <SkeletonRequirement /> 
+    );
+  }
+
+    return (
+        
         <section className="p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 max-w-5xl mx-auto">
             <div>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center gradient-text">

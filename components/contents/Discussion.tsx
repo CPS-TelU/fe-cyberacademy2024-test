@@ -180,7 +180,7 @@ const Discussion = () => {
                   <div className="w-10 h-10 bg-red-600 rounded-full flex justify-center items-center text-white font-bold mr-3">
                     {discussion.user.charAt(0).toUpperCase()}
                   </div>
-                  <div>
+                  <div> 
                     <h3 className="font-bold">{discussion.user}</h3>
                     <span className="text-gray-500 text-sm">{discussion.time}</span>
                   </div>
