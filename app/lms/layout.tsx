@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { poppins } from "@/styles/font";
 import "../globals.css";
 
 import Footer from "@/components/Footer";
@@ -15,8 +14,8 @@ export default async function LmsLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} py-8`}>
-        <NavbarLms />
+      <body>
+        <NavbarLms  />
         {children}
         <Footer />
       </body>
