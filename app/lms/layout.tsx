@@ -15,7 +15,7 @@ export default async function LmsLayout({
   return (
     <html lang="en">
       <body>
-        <NavbarLms  />
+        <NavbarLms/>
         {children}
         <Footer />
       </body>

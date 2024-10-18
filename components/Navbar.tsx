@@ -124,7 +124,7 @@ const NavbarLms = () => {
                 Profile
               </Link>
               <Link
-                href="/"
+                href="/logout"
                 className="block px-4 py-2 text-gray-700 hover:text-white hover:bg-red-600 hover:rounded-b-2xl"
               >
                 Logout
