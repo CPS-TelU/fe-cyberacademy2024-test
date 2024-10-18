@@ -25,7 +25,7 @@ export function SkeletonHomeHero() {
 
 export function SkeletonAbout() {
     return (
-      <section className="px-6 md:py-12 md:px-12 xl:px-28  ">
+      <section className="px-6 md:py-12 md:px-12 xl:px-28 animate-pulse ">
       <div className="flex flex-col md:flex-row items-center justify-center">
         <Skeleton className="bg-gray-300 h-12 sm:h-12 md:h-14 lg:h-16 xl:h-16 2xl:h-16 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[780px] xl:w-[800px] 2xl:w-[800px] "/>
       </div>
@@ -53,7 +53,7 @@ export function SkeletonAbout() {
 export function SkeletonBenefit() {
   return (
     <section className="p-12">
-      <div className="flex flex-col justify-center items-center text-center">
+      <div className="flex flex-col justify-center items-center text-center animate-pulse">
         <Skeleton className="w-[250px] sm:w-[500px] md:w-[600px] lg:w-[830px] xl:w-[800px] 2xl:w-[850px] 
                                                       h-12 sm:h-12 md:h-14 lg:h-16 xl:h-16 2xl:h-16 bg-gray-300 "/>
       </div>
@@ -73,26 +73,30 @@ export function SkeletonBenefit() {
 
 export function SkeletonKnowledge() {
   return (
-    <div className="w-full h-full py-10 md:py-20 px-4">
-      <div className="flex flex-col justify-center items-center text-center">
+    <div className="w-full h-full py-10 md:py-20 px-4 animate-pulse">
+  <div className="flex flex-col justify-center items-center text-center gap-4">
     <Skeleton className="w-[250px] sm:w-[500px] md:w-[600px] lg:w-[830px] xl:w-[800px] 2xl:w-[860px] 
                         h-12 sm:h-12 md:h-14 lg:h-16 xl:h-16 2xl:h-16 bg-gray-300 "/>
-    </div>
-    <div className="max-w-[300px] mx-auto grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-6 justify-items-center">
-    {[...Array(4)].map((_, index) => (
-            <div key={index} className="mt-8" >
-              <Skeleton className="bg-gray-300 h-[300px] sm:h-[300px] md:h-[300px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] 
-                                   rounded-3xl w-[200px] sm:w-[200px] md:w-[200px] lg:w-[200px] xl:w-[220px] 2xl:w-[300px] "/>
-            </div>
-             ))}
-             <div className="flex justify-center items-center">
-            <div className="flex justify-center items-center gap-2 rounded-full">
-                <Skeleton className="bg-gray-300 h-10 w-10 rounded-full" />
-                <Skeleton className="bg-gray-300 h-10 w-10 rounded-full" />
-            </div>
-        </div>
-    </div>
   </div>
+
+  <div className="w-full h-full py-8 md:py-20 px-4">
+  <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center mt-4">
+    {[...Array(4)].map((_, index) => (
+      <div key={index} className="mt-6">
+        <div className="bg-gray-300 h-[200px] sm:h-[200px] md:h-[250px] lg:h-[250px] xl:h-[250px] 2xl:h-[300px] 
+                         rounded-3xl w-[200px] sm:w-[200px] md:w-[200px] lg:w-[200px] xl:w-[200px] 2xl:w-[300px]">
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+  <div className="flex justify-center items-center gap-4 mt-8">
+    <Skeleton className="bg-gray-300 h-10 w-10 rounded-full" />
+    <Skeleton className="bg-gray-300 h-10 w-10 rounded-full" />
+  </div>
+</div>
+
   )
 }
 

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const SubmissionText: React.FC = () => {
@@ -31,9 +32,11 @@ const SubmissionText: React.FC = () => {
         <button className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">
           Save changes
         </button>
-        <button className="px-4 py-2 bg-white border-2 border-red-300 text-gray-700 rounded-md hover:bg-red-300 hover:text-white">
-          Cancel
-        </button>
+        <Link href='/lms/mycourses/coursedetail/assignment' passHref>
+          <button className="px-4 py-2 bg-white border-2 border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-white">
+            Cancel
+          </button>
+        </Link>
       </div>
     </div>
   );
