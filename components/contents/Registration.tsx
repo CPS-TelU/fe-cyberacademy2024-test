@@ -3,6 +3,7 @@
 import { poppins } from "@/styles/font";
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import SuccessAlert from "../ui/Alerts"; // Import SuccessAlert
 
 const RegistrationPage = () => {
   const [formData, setFormData] = useState({
@@ -11,21 +12,24 @@ const RegistrationPage = () => {
     className: "",
     email: "",
     noHp: "",
-    gender: "Select an option",
+    gender: "Select your gender",
     faculty: "Select your faculty",
-    year: "Select an option",
+    year: "Select your year of enrollment",
     major: "",
     password: "",
     document: "",
     github: "",
   });
-  const [isReady, setIsReady] = useState(false); // State untuk checkbox
+  const [isReady, setIsReady] = useState(false);
   const [showFacultyDropdown, setShowFacultyDropdown] = useState(false);
   const [showYearDropdown, setShowYearDropdown] = useState(false);
   const [showGenderDropdown, setShowGenderDropdown] = useState(false);
 
+  const [alertMessage, setAlertMessage] = useState(""); // State for alert message
+  const [isSuccess, setIsSuccess] = useState<boolean | null>(null); // State for success or failure alert
+
   const faculties = ["Electrical Engineering", "Industrial Engineering"];
-  const years = ["2021", "2022", "2023", "2024"];
+  const years = ["2022", "2023", "2024"];
   const genders = ["Male", "Female"];
 
   const facultyRef = useRef<HTMLDivElement>(null);
@@ -68,21 +72,27 @@ const RegistrationPage = () => {
 
   const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
   const REGISTRATION_API_URL = `${API_BASE_URL}/auth/register`;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
     try {
       const response = await axios.post(
-        // "https://be-cyber-academy.vercel.app/api/auth/register",
         REGISTRATION_API_URL,
         formData
       );
       console.log(response.data);
-      alert("Registration successful!");
+      setIsSuccess(true);
+      setAlertMessage("Registration successful!");
     } catch (error) {
       console.error("Error registering:", error);
-      alert("Failed to register. Please try again.");
+      setIsSuccess(false);
+      setAlertMessage("Failed to register. Please try again.");
     }
+  };
+
+  const handleCloseAlert = () => {
+    setIsSuccess(null);
+    setAlertMessage("");
   };
 
   return (
@@ -97,6 +107,8 @@ const RegistrationPage = () => {
           The first step to start your journey
         </p>
       </div>
+
+
       <form
         onSubmit={handleSubmit}
         className="bg-white px-6 md:px-16 py-8 rounded-2xl shadow-2xl w-full max-w-lg md:max-w-4xl mb-8 border border-gray-100"
@@ -239,6 +251,7 @@ const RegistrationPage = () => {
             )}
           </div>
         </div>
+
         <div className="mb-4">
           <label className="block text-sm font-medium">Major</label>
           <input
@@ -247,7 +260,40 @@ const RegistrationPage = () => {
             value={formData.major}
             onChange={handleChange}
             className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500"
-            placeholder="Telecommunication Engineering"
+            placeholder="Informatics Engineering"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-medium">Password</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500"
+            placeholder="Password"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-medium">Document</label>
+          <input
+            type="text"
+            name="document"
+            value={formData.document}
+            onChange={handleChange}
+            className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500"
+            placeholder="Paste your document link here"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-medium">GitHub Account</label>
+          <input
+            type="text"
+            name="github"
+            value={formData.github}
+            onChange={handleChange}
+            className="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500"
+            placeholder="https://github.com/sayyid"
           />
         </div>
 
@@ -255,7 +301,7 @@ const RegistrationPage = () => {
           <input
             type="checkbox"
             checked={isReady}
-            onChange={() => setIsReady(!isReady)} // Toggle checkbox state
+            onChange={() => setIsReady(!isReady)}
             className="h-4 w-4 text-red-500 focus:ring-red-400 border-gray-300 rounded"
           />
           <label className="ml-2 text-sm">
@@ -263,17 +309,28 @@ const RegistrationPage = () => {
           </label>
         </div>
 
-        {/* Submit button */}
+        {alertMessage && (
+        <div className="mb-4 w-full max-w-lg md:max-w-4xl">
+          <SuccessAlert
+            message={alertMessage}
+            isSuccess={isSuccess}
+            onClose={handleCloseAlert}
+          />
+        </div>
+      )}
+
         <button
           type="submit"
-          className={`w-full bg-[#BA2025] text-white font-bold py-2 px-4 rounded-lg ${
+          className={`w-full bg-[#BA2025] text-white font-bold py-4 px-4 rounded-lg ${
             isReady ? "hover:bg-red-500" : "opacity-50 cursor-not-allowed"
           }`}
-          disabled={!isReady} // Disable button if not checked
+          disabled={!isReady}
         >
           Submit
         </button>
       </form>
+
+     
     </div>
   );
 };

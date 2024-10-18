@@ -7,7 +7,7 @@ const AssignmentSection: React.FC = () => {
     return (
         <div className={` ${poppins.className}`}>
             {/* Red Title with PNG Icon outside of AssignmentCard */}
-            <h1 className="text-3xl font-semibold text-red-600 flex items-center justify-start mb-4 mt-28 font-bold">
+            <h1 className="text-3xl font-semibold text-red-600 flex items-center justify-start mb-4 mt-12 font-bold">
                 <span className="mr-4 sm:mr-0 ml-4 sm:ml-0"> {/* Geser icon ke kanan pada mobile */}
                     {/* PNG Icon for Assignment */}
                     <Image 
