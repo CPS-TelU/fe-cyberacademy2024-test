@@ -1,7 +1,27 @@
+"use client";
+
 import { BenefitCard } from "./BenefitCard"
+import { useState, useEffect } from "react";
+import { SkeletonBenefit } from "../ui/SkeletonCard";
 
 
 const Benefit = () => {
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+  
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 700); // Simulate loading delay
+  
+      return () => clearTimeout(timer); // Cleanup timer on component unmount
+    }, []);
+  
+    if (isLoading) {
+      return (
+          <SkeletonBenefit /> 
+      );
+    }
 
     return (
         <section className="p-12">

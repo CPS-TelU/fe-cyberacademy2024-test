@@ -1,12 +1,32 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import { ArrowButton } from "../ui/AniButton";
 import Image from "next/image";
+import { SkeletonHomeHero } from "../ui/SkeletonCard";
+import { useState, useEffect } from "react";
 
 const HomeHero = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 700); // Simulate loading delay
+
+    return () => clearTimeout(timer); // Cleanup timer on component unmount
+  }, []);
+
+  if (isLoading) {
+    return (
+        <SkeletonHomeHero /> 
+    );
+  }
+
   return (
     <section className="flex flex-col justify-center items-center  py-10 md:py-20">
-      {/* Content */}
       <div className="text-center items-center">
         <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold items-center text-center mb-4 mx-auto w-[90%] sm:w-[600px] md:w-[800px] lg:w-[900px] 2xl:w-[1000px]">
           Welcome To <span className="gradient-text">Cyber Academy</span>
