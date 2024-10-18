@@ -3,7 +3,7 @@ import { poppins } from "@/styles/font";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Login",
+  title: "Login Cyber Academy",
 };
 export default async function LoginLayout({
   children,

@@ -3,7 +3,7 @@ import "../globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Registration",
+  title: "Registration Cyber Academy",
 };
 export default async function RegisterationLayout({
   children,

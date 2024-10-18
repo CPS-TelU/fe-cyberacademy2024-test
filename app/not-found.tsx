@@ -1,6 +1,5 @@
 import { poppins } from "@/styles/font";
 import Link from "next/link";
-import "./globals.css";
 
 const NotFound = () => {
   return (
@@ -20,7 +19,6 @@ const NotFound = () => {
         </p>
         <Link
           href="/"
-          rel="noopener noreferrer"
           className="bg-red-600 text-white px-4 py-2 rounded-md mt-5 hover:bg-red-700"
         >
           Back to Homepage
