@@ -1,7 +1,8 @@
 {
-  "extends": "next",
+  "extends": ["next/core-web-vitals"],
   "rules": {
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off"
+    "no-console": "off",      // Matikan aturan 'no-console'
+    "react/no-unescaped-entities": "off", // Matikan aturan untuk karakter tak ter-escape
+    "react/react-in-jsx-scope": "off" // Matikan aturan React dalam JSX (Next.js tidak memerlukannya)
   }
 }
