@@ -101,7 +101,7 @@ const [isLoading, setIsLoading] = useState(true);
                         }`}
                     >
                         <div className="py-3 text-sm sm:text-base md:text-lg text-gray-600">
-                        The latest semester transcript should include detailed course grades and formal proof of the student's academic performance.
+                        The latest semester transcript should include detailed course grades and formal proof of the student&apos;s academic performance.
                         </div>
                     </div>
                 </div>
