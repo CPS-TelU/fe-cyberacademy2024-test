@@ -1,4 +1,3 @@
-import { poppins } from "@/styles/font";
 import FlipCard from "@/components/ui/FlipCard";
 
 export function BenefitCard() {

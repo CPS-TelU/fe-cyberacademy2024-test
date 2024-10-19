@@ -73,19 +73,20 @@ const RegistrationPage = () => {
 
   const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
   const REGISTRATION_API_URL = `${API_BASE_URL}/auth/register`;
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        REGISTRATION_API_URL, 
-        formData);
+      await axios.post(REGISTRATION_API_URL, formData); // Ambil data dari response
       setIsSuccess(true);
       setAlertMessage("Registration successful!");
-    } catch (err: any) {
-      const errorMessage = err.response?.data?.message || "Failed to register. Please try again.";
-      setIsSuccess(false);
-      setAlertMessage(errorMessage);
+    } catch (err: unknown) { // Perbaiki tipe dari 'err'
+      if (axios.isAxiosError(err) && err.response) {
+        const errorMessage = err.response.data?.message || "Failed to register. Please try again.";
+        setIsSuccess(false);
+        setAlertMessage(errorMessage);
+      } else {
+        setAlertMessage("An unknown error occurred.");
+      }
     }
   };
 
@@ -301,7 +302,7 @@ const RegistrationPage = () => {
             className="h-4 w-4 text-red-500 focus:ring-red-400 border-gray-300 rounded"
           />
           <label className="ml-2 text-sm">
-            I'm Ready To Start My Journey
+            I&apos;m Ready To Start My Journey
           </label>
         </div>
 

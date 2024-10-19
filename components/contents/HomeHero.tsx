@@ -1,7 +1,4 @@
-"use client";
-
-import Link from "next/link";
-import React from "react";
+"use client";;
 import { ArrowButton } from "../ui/AniButton";
 import Image from "next/image";
 import { SkeletonHomeHero } from "../ui/SkeletonCard";
@@ -9,7 +6,6 @@ import { useState, useEffect } from "react";
 
 const HomeHero = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
