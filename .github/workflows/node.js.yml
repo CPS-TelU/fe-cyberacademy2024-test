@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.22.9]
+        node-version: [20.18.0]
         
     env:
       NEXT_WEBSITE_URL: ${{secrets.NEXT_WEBSITE_URL}}
