@@ -3,6 +3,7 @@
   "rules": {
     "no-console": "off",      // Matikan aturan 'no-console'
     "react/no-unescaped-entities": "off", // Matikan aturan untuk karakter tak ter-escape
-    "react/react-in-jsx-scope": "off" // Matikan aturan React dalam JSX (Next.js tidak memerlukannya)
+    "react/react-in-jsx-scope": "off" ,// Matikan aturan React dalam JSX (Next.js tidak memerlukannya)
+    "@typescript-eslint/no-unused-vars": "off"
   }
 }
