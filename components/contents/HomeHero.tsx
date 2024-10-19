@@ -34,7 +34,7 @@ const HomeHero = () => {
       </div>
       <div className="mt-12 w-full flex justify-center px-4 md:px-0">
         <Image
-          src="/oplab.jpg" // Replace with your image path
+          src="/bg.png" // Replace with your image path
           alt="Hero Image"
           width={1200}
           height={800}
