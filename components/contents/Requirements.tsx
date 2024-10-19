@@ -90,7 +90,7 @@ const [isLoading, setIsLoading] = useState(true);
                         }`}
                         onClick={() => setIsOpen3(!isOpen3)}
                     >
-                        <span>KSM</span>
+                        <span>KHS</span>
                         <span className={`${isOpen3 ? 'text-red-600' : 'text-gray-900'}`}>
                             {isOpen3 ? '−' : '+'}
                         </span>
