@@ -78,20 +78,16 @@ const RegistrationPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        REGISTRATION_API_URL,
-        formData
-      );
+        REGISTRATION_API_URL, 
+        formData);
       setIsSuccess(true);
       setAlertMessage("Registration successful!");
     } catch (err: any) {
-      console.error("Error registering:", err.response?.data?.message);
       const errorMessage = err.response?.data?.message || "Failed to register. Please try again.";
-      
       setIsSuccess(false);
       setAlertMessage(errorMessage);
     }
   };
-  
 
   const handleCloseAlert = () => {
     setIsSuccess(null);
